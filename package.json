@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@pomgui/pdf-tables-parser": "^0.1.0",
+    "pdf-parse": "^1.1.1",
+    "pdf2json": "^3.0.5",
+    "pdf2table": "^0.0.2",
+    "pdfjs-dist": "^2.7.570",
+    "pdfreader": "^3.0.2"
+  }
+}
