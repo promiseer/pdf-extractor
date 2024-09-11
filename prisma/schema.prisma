@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Report {
+  id               Int    @id @default(autoincrement())
+  app_id           Int
+  xref             Int    
+  settlement_date  DateTime
+  broker           String
+  sub_broker       String
+  borrower_name    String
+  description      String
+  total_loan       Float
+  commission_rate  Float
+  upfront          Float
+  upfront_incl_gst Float
+
+  @@unique([xref, total_loan])
+}
